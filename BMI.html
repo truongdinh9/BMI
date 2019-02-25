@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi so BMI</title>
+</head>
+<body>
+
+Nhap ho va ten cua ban : <input type="text" id="ten"> <br>
+Nhap chieu cao cua ban (m) : <input type="text" id="cao"> <br>
+Nhap can nang cua ban (Kg) : <input type="text" id="nang"> <br>
+<button onclick="BMI()">Submit</button>
+
+<Hr>
+Chi so BMI cua ban : <input type="text" id="chiso"> <br>
+<span id="i"> </span>
+
+<script>
+    function BMI() {
+        var x = parseFloat(nang.value)/parseFloat(cao.value)/parseFloat(cao.value);
+        chiso.value=x;
+        switch (true) {
+            case x<18.5:
+                document.getElementById("i").innerHTML= "Ban"+ten.value+"thieu can";
+                break;
+            case x<25 :
+                document.getElementById("i").innerHTML= "Ban"+ten.value+"can doi";
+                break;
+            case x<30 :
+                document.getElementById("i").innerHTML= "Ban"+ten.value+"hoi thua can";
+                break;
+            default :
+                document.getElementById("i").innerHTML= "Ban"+ten.value+"rat beo";
+        }
+
+    }
+</script>
+</body>
+</html>
